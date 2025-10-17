@@ -33,7 +33,7 @@ public abstract class Transaktion {
     public abstract double affectAmount();
     @Override
     public String toString() {
-        return "Income{" + "amount=" + amount + ", description=" + description + ", date=" + date + '}';
+        return " | " + amount + " | " + description +" | " + date ;
     }
 
 }

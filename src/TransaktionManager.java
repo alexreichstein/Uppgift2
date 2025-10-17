@@ -33,4 +33,25 @@ public class TransaktionManager {
     public List<Transaktion> getTransaktions() {
         return transaktions;
     }
+
+    public double calculateTotalExpenses(){
+        double expenses = 0;
+        for (Transaktion transaktion : transaktions) {
+            if (transaktion instanceof Expense){
+                expenses += transaktion.getAmount();
+            }
+        }
+        return expenses;
+    }
+
+    public double calculateTotalIncome(){
+        double income = 0;
+        for (Transaktion transaktion : transaktions) {
+            if (transaktion instanceof Income){
+                income += transaktion.getAmount();
+            }
+        }
+        return income;
+    }
+
 }

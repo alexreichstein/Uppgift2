@@ -2,6 +2,10 @@ import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// 1. Putsat i transaktion output affectamount
+// 2. La till calculatetotalexpenses i transaktionmanager, Case 4.
+// 3. La till calculatetotalIncome i transaktionmanager, case 5
+
 public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu();
@@ -34,6 +38,7 @@ public class Main {
             }
 
             switch (selected.getNumber()){
+
                 case 1 -> {
                 System.out.println("\n--- Lägga till transaktion ---");
                 System.out.println("Är det en 1 - Inkomst eller 2 - Utgift?");
@@ -86,9 +91,16 @@ public class Main {
                     System.out.println("Balans: " + balance);
                 }
 
+                case 4 -> {
+                    System.out.println("\n--- Visa spenderade pengar ---");
+                    System.out.println("Spenderat: " + transaktionManager.calculateTotalExpenses());
+                }
 
-                case 4 -> System.out.println("Visa spenderade pengar");
-                case 5 -> System.out.println("Visar inkomster");
+                case 5 -> {
+                    System.out.println("\n--- Visa inkomster ---");
+                    System.out.println("Inkomster: " + transaktionManager.calculateTotalIncome());
+                }
+
                 case 6 -> System.out.println("Rensar tidigare sparad data");
                 case 7 -> {
                     System.out.println("Avslutar");

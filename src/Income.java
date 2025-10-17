@@ -13,4 +13,8 @@ public class Income extends Transaktion{
         return getAmount();
     }
 
+    public double showIncome(){
+        return affectAmount();
+    }
+
 }
